@@ -10,8 +10,8 @@
         <td th:text="${user .getSurname()}"/>
     <br>
     <td><a th:href="@{userUpdate/{id}(id=${user.id})}">Edit</a></td>
-    <td><a th:href="@{userDelete/{id}(id=${user.id})}">Delete</a></td>
-    <br>
+
+    <td><form th:method="DELETE" th:action="@{/{id}(id=${user.id})}"><input type="submit" value="Delete"/></form> </td>
     <br>
 </div>
 <br/>
